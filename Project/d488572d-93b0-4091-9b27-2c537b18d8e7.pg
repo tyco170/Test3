@@ -10,16 +10,6 @@
 
 ; Initialize error reporting
 
-        CALL err.init_0()
-
-; Initialize robot and application variables
-
-        CALL rob.init_0()
-        CALL rob.init.grip_0()
-
-; Move the robot to a safe location
-
-        CALL rob.move.safe_0()
 
 ; Main robot processing loop
 
