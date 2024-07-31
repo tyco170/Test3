@@ -1,0 +1,59 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ControllerConnectionSystemStartup id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers.Startup/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>-387617352</_a>
+<_b>-5030</_b>
+<_c>17490</_c>
+<_d>137</_d>
+<_e>6</_e>
+<_f>76</_f>
+<_g>165</_g>
+<_h>163</_h>
+<_i>237</_i>
+<_j>161</_j>
+<_k>104</_k>
+</Identifier>
+<Enabled>true</Enabled>
+<ConfigurationCount>1</ConfigurationCount>
+<Configuration0 href="#ref-3"/>
+<ReconnectionTimeDelay>5000</ReconnectionTimeDelay>
+</a1:ControllerConnectionSystemStartup>
+<a1:ControllerConnectionSystemStartupItem id="ref-3" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers.Startup/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>-534881325</_a>
+<_b>11158</_b>
+<_c>17092</_c>
+<_d>129</_d>
+<_e>106</_e>
+<_f>131</_f>
+<_g>127</_g>
+<_h>185</_h>
+<_i>64</_i>
+<_j>43</_j>
+<_k>140</_k>
+</Identifier>
+<LinkRef href="#ref-4"/>
+<EnableStartupProgram>false</EnableStartupProgram>
+<RunOnce>false</RunOnce>
+<TaskNumber>0</TaskNumber>
+<ProgramName xsi:type="xsd:anyType" xsi:null="1"/>
+</a1:ControllerConnectionSystemStartupItem>
+<a3:LinkedReference id="ref-4" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.References/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>1113024913</_a>
+<_b>15651</_b>
+<_c>16928</_c>
+<_d>130</_d>
+<_e>245</_e>
+<_f>185</_f>
+<_g>50</_g>
+<_h>84</_h>
+<_i>148</_i>
+<_j>65</_j>
+<_k>66</_k>
+</Identifier>
+<CachedName id="ref-5">/SmartController0/Controller Settings</CachedName>
+</a3:LinkedReference>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

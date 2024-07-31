@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sysmac schemaVersion="1">
+  <Entity type="Solution" subtype="" id="7f2a26e6-eab6-428e-9eea-6d3e86dec25b" name="wizardProject_V3" version="0" dateCreated="07/29/2024 10:15:59" trackingId="9b399431-e9c2-41ef-b59a-009c13d186cd">
+    <AccessInfos />
+    <ChildEntities>
+      <Entity type="EntityDefinedColor" subtype="" id="78c4e1ba-3fb4-49bd-9f15-186393f6ec47" name="EntityDefinedColor" version="0" dateCreated="07/29/2024 10:15:59" trackingId="5552cccf-2dd3-404c-be78-84be937cc71f">
+        <AccessInfos />
+        <ChildEntities />
+      </Entity>
+      <Entity type="EntityDefinedCheckBox" subtype="" id="7728e4b3-0c92-4dcd-8b66-2858a5d72974" name="EntityDefinedCheckBox" version="0" dateCreated="07/29/2024 10:15:59" trackingId="64ba2ff0-7d89-4c83-88ba-23346269b863">
+        <AccessInfos />
+        <ChildEntities />
+      </Entity>
+      <Entity type="ProjectShortcut" subtype="" id="e377fa2e-52ea-49a1-a326-175ba9435acd" name="Project shortcut items" version="0" dateCreated="07/29/2024 10:15:59" dateLastModified="07/29/2024 10:15:59" trackingId="424ed12c-d67e-4005-bf76-9b9711979d39" SDName="Project shortcut items">
+        <AccessInfos />
+        <ChildEntities />
+      </Entity>
+      <Entity type="VirtualDisplaySetting" subtype="" id="a5e1ee9f-73bc-4cef-bf18-3677feeec56a" name="3DVisualizerSettings" version="0" dateCreated="07/29/2024 10:15:59" dateLastModified="07/29/2024 10:15:59" trackingId="72258341-dc7b-4135-9780-a69440a3272e">
+        <AccessInfos />
+        <ChildEntities />
+      </Entity>
+      <Entity type="Sharing" subtype="" id="17fc55fe-74a5-4538-b166-79f144f3525e" name="EntitySharing" version="0" dateCreated="07/29/2024 10:15:59" dateLastModified="07/29/2024 10:15:59" trackingId="dc110f0a-7605-4601-a36f-4ad868fa1f75" SDName="Sharing setting between devices">
+        <AccessInfos />
+        <ChildEntities />
+      </Entity>
+      <Entity type="Watch" subtype="MCWatchSubType" id="05cad460-554d-4744-83f6-c3f9e6ebe3d0" name="Watch (Project)" version="0" dateCreated="07/29/2024 10:15:59" trackingId="e852ce71-fa8f-4a44-ae01-2dea2d61e90e">
+        <AccessInfos />
+        <ChildEntities />
+      </Entity>
+      <Entity type="Device" subtype="AdeptCtrlr" id="80cfaaf7-e2e7-4d98-a2ae-c24f3b775564" name="SmartController0" version="0" dateCreated="07/29/2024 10:16:00" dateLastModified="07/29/2024 10:16:01" trackingId="5fd0b38c-313c-468a-a119-022e20209ca7" hash="dc8a7b1e6c44b550b8fb0bf76b1160db" DHS="8d77179584da5c09c85d01c084484fae" TH="859eba516f5058d1cac964ae038760f3">
+        <AccessInfos />
+        <ChildEntities>
+          <Entity type="AdeptCtrlrSettings" subtype="" id="42576991-3d23-4220-82f5-b93254944142" name="Controller Settings0" version="0" dateCreated="07/29/2024 10:16:00" dateLastModified="07/29/2024 10:57:39" trackingId="30f85bbf-e30e-4706-8160-697fb139ffff" DN="Controller Settings" hash="3b0c32c52c538985081a6054699c37c0">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="AdeptCtrlrSaveConfiguration" subtype="" id="b928b1ed-41a6-4b79-a287-09a715974acc" name="Save Configuration" version="0" dateCreated="07/29/2024 10:16:00" dateLastModified="07/29/2024 10:16:00" trackingId="2fb1ec03-620f-4ea0-bd87-31e7075c8a12" DN="Save Configuration">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="AdeptCtrlrMonitorWindow" subtype="" id="9425d953-d303-48d4-b880-18a91bd8780f" name="Monitor Window" version="0" dateCreated="07/29/2024 10:16:00" dateLastModified="07/29/2024 10:16:00" trackingId="43b4c5bb-e015-4202-bd8e-3c4937cd5637" DN="Monitor Window">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AdeptRobots" id="c50e426a-c039-4bc9-9a07-a61dae13b733" name="Robots" version="0" dateCreated="07/29/2024 10:16:00" trackingId="86a4b528-9474-4d81-9265-b7698f47fdd6" DN="Robots">
+            <AccessInfos />
+            <ChildEntities>
+              <Entity type="AdeptRobot" subtype="Cobra800" id="293bb3c4-cd20-4ef7-b42f-dbc03cc60fa8" name="R1 Cobra800" version="0" dateCreated="07/29/2024 10:16:50" dateLastModified="07/29/2024 10:17:49" trackingId="4ab2bc2d-5a30-49c4-8476-d6d3b83016fb" DN="R1 Cobra800" hash="51fd6c8be89ee95970a60a37ef592f75">
+                <AccessInfos />
+                <ChildEntities>
+                  <Entity type="AdeptEndEffector" subtype="" id="2680aa7f-8978-41cb-8aa7-ad8f7e8d1724" name="IO EndEffector0" version="0" dateCreated="07/29/2024 10:16:51" dateLastModified="07/29/2024 10:17:49" trackingId="4e0425f8-bcd0-4269-99fe-89f3def45bde" DN="IO EndEffector0" hash="f3dfc787c9fe45bfe4d2dd14f9f7643a">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                </ChildEntities>
+              </Entity>
+            </ChildEntities>
+          </Entity>
+          <Entity type="Group" subtype="AdeptCtrlrUserModules" id="55ed7445-e1e3-414c-a6ad-88d3ef98e7b0" name="V+ Modules" version="0" dateCreated="07/29/2024 10:16:00" trackingId="772e7bca-b3df-45b8-b6e8-e688f5527595" DN="V+ Modules">
+            <AccessInfos />
+            <ChildEntities>
+              <Entity type="AdeptCtrlrUserModule" subtype="VPlusModule" id="5e4d94c7-2984-4cee-9aa5-4e2cb9a26b0e" name="a.robot_0" version="0" dateCreated="07/29/2024 10:17:14" dateLastModified="07/29/2024 10:17:49" trackingId="b12477de-64a5-4960-8ed9-0d53ede9aaad" DN="a.robot_0" hash="e1a7450d2f859b3c89ee0a3d88d034ff">
+                <AccessInfos />
+                <ChildEntities>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="9fed9363-52f5-4398-b090-70021592ae09" name="a.robot_0" version="0" dateCreated="07/29/2024 10:17:14" dateLastModified="07/29/2024 10:17:49" trackingId="3e621600-2015-4f52-a024-5887d43f742e" DN="a.robot_0" hash="a93c9cb32c129d6926469804f499b4c3">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="ea929971-d5c2-42e7-b5a0-d1d4f9e1eba1" name="rob.move.safe_0" version="0" dateCreated="07/29/2024 10:17:14" dateLastModified="07/29/2024 10:17:49" trackingId="71fd370d-5ccf-4a58-a509-975182c435a3" DN="rob.move.safe_0" hash="7f9e2f57ae5b144167a5b603cf0a3f5b">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="b069ba63-fbd7-452c-b967-5fbb7008f7ee" name="rob.grip_0" version="0" dateCreated="07/29/2024 10:17:14" dateLastModified="07/29/2024 10:17:49" trackingId="9c11ea70-6670-4119-85bc-4eb2d6f1b2a7" DN="rob.grip_0" hash="14f94450d3a971423a51d70e27ff5f30">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="ca06f69f-4c28-4283-8862-5a92e7c93187" name="rob.init_0" version="0" dateCreated="07/29/2024 10:17:14" dateLastModified="07/29/2024 10:17:49" trackingId="f15ab9c9-2e18-486a-9d57-32d403f20e52" DN="rob.init_0" hash="6884dc6d2549eb276908d276d6c0a81a">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="c6c42d8a-fb5b-45a0-8b32-6b5b10b27733" name="rob.get.ip_0" version="0" dateCreated="07/29/2024 10:17:14" dateLastModified="07/29/2024 10:17:49" trackingId="2a6a76c5-4ce8-4e78-b7e4-14912b4d0984" DN="rob.get.ip_0" hash="eb760b7bc6c1b6b71ff7be3853907179">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="7c1b7149-20a2-42d2-98a2-43761230b4d7" name="rob.init.grip_0" version="0" dateCreated="07/29/2024 10:17:17" dateLastModified="07/29/2024 10:17:49" trackingId="acc03e94-8dd3-48f5-9c42-4cdfe782ff46" DN="rob.init.grip_0" hash="c319afc00a15e3b06568c86f89ceee3d">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="ccde301d-bdb1-4bb2-afda-b52c6729520a" name="rob.pick_0" version="0" dateCreated="07/29/2024 10:17:22" dateLastModified="07/29/2024 10:17:49" trackingId="8293999e-35cb-4dc4-8b8b-9adc0d8cb104" DN="rob.pick_0" hash="6b5eb6dc912a390b316104fdb54e0a8a">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="ab58a524-2253-4293-bcd8-7daa3c9343b1" name="rob.place_0" version="0" dateCreated="07/29/2024 10:17:27" dateLastModified="07/29/2024 10:17:49" trackingId="be08ffe2-d50b-48a3-8bda-8fe88a75924b" DN="rob.place_0" hash="9099a8704b7f973a32c430d51a14e2e8">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="d488572d-93b0-4091-9b27-2c537b18d8e7" name="rob.main_0" version="0" dateCreated="07/29/2024 10:17:27" dateLastModified="07/29/2024 10:17:49" trackingId="f1bba3cb-3385-4f2a-b0af-c9f3a54249aa" DN="rob.main_0" hash="d5a5693629161693723be1ebf924484b">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                </ChildEntities>
+              </Entity>
+              <Entity type="AdeptCtrlrUserModule" subtype="VPlusModule" id="6a6fd45f-8d4a-466f-8a37-4cd7c5d89d80" name="a.error_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="e9902900-1d0e-4b6f-9804-94e9dfcbe168" DN="a.error_0" hash="c43de10011c12d13a3a46eb79e3898b6">
+                <AccessInfos />
+                <ChildEntities>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="0fad951d-7b0a-420b-8ff1-0821570f667f" name="a.error_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="26454405-dba9-4459-a685-726be1e6b21d" DN="a.error_0" hash="5d3a3cb8a987e20ebe1a7995b7e6894f">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="e35aaef3-235d-452c-992c-0a01cab91755" name="err.init_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="f31e88d5-8023-4d68-96a1-16d5b26b1cd5" DN="err.init_0" hash="229f35296f117ccf932a2ff676b10dda">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="a58c98f1-3e5f-4160-84e4-6bbdc8e8f8af" name="err.reacte_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="ef89c941-d527-4181-abc1-fc746e268512" DN="err.reacte_0" hash="7cccc312106b9715c80956fbc4af6b1d">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="3597213d-7676-4e82-a288-42e7f9630c13" name="err.reacti_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="3a6684df-7edf-4f10-a32a-3e45c28f48b3" DN="err.reacti_0" hash="bfad4078068c55ab8f0157a986fd63e2">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="e42fa2e6-52c7-4a31-91ea-b56bb31af852" name="err.report_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="28e745c2-f9a4-45da-9ccd-c2a4995dec8b" DN="err.report_0" hash="ef3cc7de13a29f042911a92b50c2d9ee">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="e10f2ed5-2605-4dc5-bfa4-ca2397e20677" name="err.details_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="ada6efd9-657f-441c-924f-40d124b0f3a8" DN="err.details_0" hash="5efddbd2d97eead9d9cffdf07a474b21">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="c449f5c2-05cc-488d-aa0d-293f7eb1127c" name="err.log_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="d3e43751-b74a-404b-abb9-7252b6936cfc" DN="err.log_0" hash="3177fc81d760241eadcf5f65d3560487">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                  <Entity type="VPlusModule" subtype="VPlusProgram" id="5951f7c1-8312-452c-a823-9df57ec6c288" name="err.break_0" version="0" dateCreated="07/29/2024 10:17:16" dateLastModified="07/29/2024 10:17:49" trackingId="601d71b3-4d47-4dce-b9d2-f02781df42b7" DN="err.break_0" hash="11aa895e129769529235b8cebd69599f">
+                    <AccessInfos />
+                    <ChildEntities />
+                  </Entity>
+                </ChildEntities>
+              </Entity>
+            </ChildEntities>
+          </Entity>
+          <Entity type="AdeptCtrlrVariables" subtype="" id="c237ba43-18fe-43ee-a8b8-44885066505f" name="Variables" version="0" dateCreated="07/29/2024 10:16:00" dateLastModified="07/29/2024 10:30:57" trackingId="02164d1c-c785-45b0-ba74-49b8063a3e3e" DN="Variables" hash="534dda660f472a903806da940c90ead3">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+        </ChildEntities>
+      </Entity>
+      <Entity type="Device" subtype="AppMgr" id="80f2cc61-beab-4e1a-9abd-a474527022ef" name="ApplicationManager0" version="0" dateCreated="07/29/2024 10:17:12" dateLastModified="07/29/2024 10:17:49" trackingId="4b1d61dd-5ee7-4bd8-ba81-e4717af424f7" hash="9daef27b62705f5c08f4864965500443" DHS="9daef27b62705f5c08f4864965500443" TH="8289968ddc5a7ebe15a30f41c7bc2347">
+        <AccessInfos />
+        <ChildEntities>
+          <Entity type="AppMgrSettings" subtype="" id="a105c2a6-b6ed-4f04-8ba4-5142e2f2792a" name="Settings" version="0" dateCreated="07/29/2024 10:17:12" dateLastModified="07/29/2024 10:17:12" trackingId="be154f01-e3ac-4cd0-bbb9-f3db0368fb33" DN="Settings">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgr3Ds" id="3936c74f-7aa5-454b-87f9-3c1f300916b6" name="3D Visualization" version="0" dateCreated="07/29/2024 10:17:12" trackingId="9eca6f6c-020f-4be2-ae2c-72f96831d106" DN="3D Visualization">
+            <AccessInfos />
+            <ChildEntities>
+              <Entity type="Group" subtype="AppMgrScriptFunctions" id="b0ec7a71-b51d-4903-855a-f3cbc9735d34" name="Shape Script Functions" version="0" dateCreated="07/29/2024 10:17:12" trackingId="0e6691ed-b058-4e1f-82fa-1ab8ba64ae50" DN="Shape Script Functions">
+                <AccessInfos />
+                <ChildEntities />
+              </Entity>
+            </ChildEntities>
+          </Entity>
+          <Entity type="Group" subtype="AppMgrAceSights" id="3a793075-3c71-439a-9f4f-ea2431133286" name="Robot Vision Manager" version="0" dateCreated="07/29/2024 10:17:12" trackingId="14ad972a-b689-4518-83a4-ebcb19e7411a" DN="Robot Vision Manager">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgrCameraDevices" id="f861632d-bb13-4083-be95-426cca39fa62" name="Cameras" version="0" dateCreated="07/29/2024 10:17:12" trackingId="48072041-402f-4680-8321-ee233491e987" DN="Cameras">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgrConfigurations" id="4146b0e9-9991-4e65-9cad-b5be85fc45fd" name="Configuration" version="0" dateCreated="07/29/2024 10:17:12" trackingId="14b2ba41-2719-4bd8-a11d-68eb8a1e4ec1" DN="Configuration">
+            <AccessInfos />
+            <ChildEntities>
+              <Entity type="AppMgrConfiguration" subtype="RecipeManager" id="515f5b46-fad8-4e74-9c09-3bdb926e42c6" name="Recipe Manager" version="0" dateCreated="07/29/2024 10:17:12" dateLastModified="07/29/2024 10:17:49" trackingId="97e620af-4a3a-433c-82be-a2c6aa652eb9" DN="Recipe Manager" hash="1da5e3cc612757661cd6f92f09c5664c">
+                <AccessInfos />
+                <ChildEntities />
+              </Entity>
+              <Entity type="AppMgrConfiguration" subtype="ControllerConnectionSystemStartup" id="e8e56db8-ec5a-4452-8906-4ca5a3eda168" name="Controller Connection Startup" version="0" dateCreated="07/29/2024 10:17:12" dateLastModified="07/29/2024 10:17:49" trackingId="64de3b8a-8113-4b6d-8c31-2a59434d4000" DN="Controller Connection Startup" hash="fa16cce18169ccb99b3a49451ca457ef">
+                <AccessInfos />
+                <ChildEntities />
+              </Entity>
+            </ChildEntities>
+          </Entity>
+          <Entity type="Group" subtype="AppMgrFeeders" id="c739682b-f36e-4dc1-908d-090fe4843b3d" name="Feeders" version="0" dateCreated="07/29/2024 10:17:12" trackingId="f6cb4489-1f95-42fa-b516-3b8a8035be39" DN="Feeders">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgrProcesses" id="b7726fd7-7314-47ca-85f6-c82065352578" name="Process" version="0" dateCreated="07/29/2024 10:17:12" trackingId="f0975734-2b06-40b5-b644-879d5f9ce5d6" DN="Process">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgrPrograms" id="08e3451f-b62b-4c4d-9d65-70c65db3c6de" name="Programs" version="0" dateCreated="07/29/2024 10:17:12" trackingId="21780d8c-22f7-4a34-89b4-724d260ba124" DN="Programs">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgrVariables" id="ec8caca6-12d0-42dd-a1dc-a9bb3cc0068a" name="Variables" version="0" dateCreated="07/29/2024 10:17:12" trackingId="b839d0f0-df31-45a5-b6c5-45d3fba0e438" DN="Variables">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+          <Entity type="Group" subtype="AppMgrVisionTools" id="1473aac9-6912-4a7f-93e1-1f80637b3e35" name="Vision Tools" version="0" dateCreated="07/29/2024 10:17:12" trackingId="52e122aa-80b7-4815-8529-81cceb5d1843" DN="Vision Tools">
+            <AccessInfos />
+            <ChildEntities />
+          </Entity>
+        </ChildEntities>
+      </Entity>
+    </ChildEntities>
+  </Entity>
+</sysmac>

@@ -1,0 +1,43 @@
+﻿.PROGRAM rob.grip_0(open)
+;
+; ABSTRACT:     Module program for application sample robot programs
+;
+; INPUTS:       open    Should the gripper be opened or closed
+;
+; INPUTS:       None
+;
+
+        GLOBAL REAL o.open[], o.close[], i.open[], i.close[]
+        AUTO REAL outputs[2], input
+        AUTO REAL start.time, time.out, continue, code
+        AUTO $text
+
+        IF open THEN
+            outputs[0] = o.open[0]
+            outputs[1] = -o.close[0]
+            input = i.open[0]
+            $text = "Unable to open gripper"
+        ELSE
+            outputs[0] = -o.open[0]
+            outputs[1] = o.close[0]
+            input = i.close[0]
+            $text = "Unable to close gripper"
+        END
+
+        start.time = TIMER(-3)
+        time.out = 5
+
+        SIGNAL outputs[0], outputs[1]
+        IF (input <> 0) THEN
+            WHILE NOT SIG(input) DO
+                IF (TIMER(-3)-start.time) > time.out THEN
+                    CALL err.report_0(code, $text)
+                    start.time = TIMER(-3)
+                END
+                WAIT
+            END
+        END
+
+        RETURN
+.END
+

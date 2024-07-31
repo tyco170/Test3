@@ -1,0 +1,97 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:RecipeManager id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.Recipes/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>1365203782</_a>
+<_b>-1320</_b>
+<_c>20084</_c>
+<_d>156</_d>
+<_e>9</_e>
+<_f>59</_f>
+<_g>219</_g>
+<_h>146</_h>
+<_i>110</_i>
+<_j>66</_j>
+<_k>198</_k>
+</Identifier>
+<AdeptSightIndex>0</AdeptSightIndex>
+<RecipeCount>0</RecipeCount>
+<RecipeConfigurationCount>1</RecipeConfigurationCount>
+<RecipeConfiguration0 href="#ref-3"/>
+<ScriptReference href="#ref-4"/>
+<DeviceVersion xsi:null="1"/>
+<AdeptSightSelectionRecipe>0</AdeptSightSelectionRecipe>
+</a1:RecipeManager>
+<a3:VPlusGlobalVariableCollectionRecipeConfiguration id="ref-3" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers.Memory/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>-2117772920</_a>
+<_b>7069</_b>
+<_c>17149</_c>
+<_d>141</_d>
+<_e>105</_e>
+<_f>207</_f>
+<_g>115</_g>
+<_h>81</_h>
+<_i>165</_i>
+<_j>149</_j>
+<_k>148</_k>
+</Identifier>
+<SourceLink href="#ref-6"/>
+<DisplayName id="ref-7"></DisplayName>
+<SortOrder>1</SortOrder>
+<TeachAccessLevel xsi:type="a5:AccessLevel" xmlns:a5="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.Access/Ace.Core">Operator</TeachAccessLevel>
+<Count>2</Count>
+<VariableName0 id="ref-8">pick.loc[0]</VariableName0>
+<DisplayName0 id="ref-9">Pick Position</DisplayName0>
+<VariableReadAccessLevel0 xsi:type="a5:AccessLevel" xmlns:a5="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.Access/Ace.Core">Operator</VariableReadAccessLevel0>
+<VariableWriteAccessLevel0 xsi:type="a5:AccessLevel" xmlns:a5="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.Access/Ace.Core">Operator</VariableWriteAccessLevel0>
+<VariableType0 xsi:type="a6:VPlusGlobalVariableType" xmlns:a6="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers/Ace.Core">Location</VariableType0>
+<LocationAllowApproach0>true</LocationAllowApproach0>
+<LocationAllowMove0>true</LocationAllowMove0>
+<LocationApproachHeight0>25</LocationApproachHeight0>
+<LocationMoveSpeed0>20</LocationMoveSpeed0>
+<VariableName1 id="ref-10">place.loc[0]</VariableName1>
+<DisplayName1 id="ref-11">Place Position</DisplayName1>
+<VariableReadAccessLevel1 xsi:type="a5:AccessLevel" xmlns:a5="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.Access/Ace.Core">Operator</VariableReadAccessLevel1>
+<VariableWriteAccessLevel1 xsi:type="a5:AccessLevel" xmlns:a5="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.Access/Ace.Core">Operator</VariableWriteAccessLevel1>
+<VariableType1 xsi:type="a6:VPlusGlobalVariableType" xmlns:a6="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers/Ace.Core">Location</VariableType1>
+<LocationAllowApproach1>true</LocationAllowApproach1>
+<LocationAllowMove1>true</LocationAllowMove1>
+<LocationApproachHeight1>25</LocationApproachHeight1>
+<LocationMoveSpeed1>20</LocationMoveSpeed1>
+<DisplayByCategory>false</DisplayByCategory>
+</a3:VPlusGlobalVariableCollectionRecipeConfiguration>
+<a4:LinkedReference id="ref-4" xmlns:a4="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.References/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>0</_a>
+<_b>0</_b>
+<_c>0</_c>
+<_d>0</_d>
+<_e>0</_e>
+<_f>0</_f>
+<_g>0</_g>
+<_h>0</_h>
+<_i>0</_i>
+<_j>0</_j>
+<_k>0</_k>
+</Identifier>
+<CachedName href="#ref-7"/>
+</a4:LinkedReference>
+<a4:LinkedReference id="ref-6" xmlns:a4="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.References/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>-1036535229</_a>
+<_b>6398</_b>
+<_c>17390</_c>
+<_d>168</_d>
+<_e>184</_e>
+<_f>68</_f>
+<_g>136</_g>
+<_h>80</_h>
+<_i>102</_i>
+<_j>80</_j>
+<_k>95</_k>
+</Identifier>
+<CachedName id="ref-12">/SmartController0/Variables</CachedName>
+</a4:LinkedReference>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

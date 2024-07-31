@@ -1,0 +1,12 @@
+﻿.PROGRAM err.report_0(code, $text)
+
+; ABSTRACT:     Report an errror
+;
+; INPUTS:       code            Error code to report
+;               text            Additional text to display with the error
+;
+; OUTPUTS:      None
+;            
+        RETURN
+.END
+

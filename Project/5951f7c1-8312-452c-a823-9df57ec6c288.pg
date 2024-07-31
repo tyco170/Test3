@@ -1,0 +1,16 @@
+﻿.PROGRAM err.break_0()
+;
+; ABSTRACT:     Waits until the robot has stopped moving.
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+
+        WHILE STATE(2)==1 DO
+            WAIT
+        END
+
+        RETURN
+.END
+

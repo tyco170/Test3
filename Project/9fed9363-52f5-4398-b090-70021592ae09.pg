@@ -1,0 +1,11 @@
+﻿.PROGRAM a.robot_0()
+;
+; ABSTRACT:     Module program for application sample robot programs
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+
+.END
+

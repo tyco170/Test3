@@ -1,0 +1,22 @@
+﻿.PROGRAM rob.get.ip_0($ip)
+;
+; ABSTRACT:     Gets the IP address used for communications
+;
+; INPUTS:       None
+;
+; INPUTS:       $ip     The IP address to communicate with the vision server
+;
+	
+        GLOBAL $ip.address[]
+        
+        $ip = $ip.address[0]
+
+        IF DEFINED(sv.emulate.mode) THEN
+            IF sv.emulate.mode THEN
+                $ip = "127.0.0.1"
+            END
+        END
+
+        RETURN
+.END
+

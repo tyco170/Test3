@@ -1,0 +1,32 @@
+﻿.PROGRAM rob.init.grip_0()
+;
+; ABSTRACT:     Initialize variables and robot control
+;
+; INPUTS:       None
+;
+; INPUTS:       None
+;
+	
+        GLOBAL REAL o.open[], o.close[], i.open[], i.close[]
+        GLOBAL LOC grip.tool[]
+        AUTO REAL code
+	
+; Define the IO signals used to open/close the gripper
+
+        o.open[0] = 3001
+        o.close[0] = 3002
+        i.open[0] = 0
+        i.close[0] = 0
+        
+; Define the gripper tool tip offset 
+
+        SET grip.tool[0] = TRANS(0,0,0,0,0,0)
+        TOOL grip.tool[0]
+
+; Set the payload mass
+
+        PAYLOAD -1
+
+        RETURN
+.END
+

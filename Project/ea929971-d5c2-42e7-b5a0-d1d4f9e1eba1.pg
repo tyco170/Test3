@@ -1,0 +1,40 @@
+﻿.PROGRAM rob.move.safe_0()
+
+; ABSTRACT:     Move the robot to the safe position
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+
+        GLOBAL LOC safe.loc[]
+        AUTO REAL tmp[5], pos[5]
+        AUTO REAL code, resp
+        AUTO LOC z.up.loc
+
+; Calculate the current robot location aligned with the
+; z of the safe position and move the robot to that point.
+
+        TOOL NULL
+        DECOMPOSE tmp[] = HERE
+        DECOMPOSE pos[] = safe.loc[0]
+        SET z.up.loc = TRANS(tmp[0],tmp[1],pos[2],tmp[3],tmp[4],tmp[5])
+
+; Move the robot
+
+        MOVE z.up.loc
+        BREAK
+
+; Move to the safe position
+
+        MOVE safe.loc[0]
+        BREAK
+
+; Make sure the gripper is opened
+
+        TOOL grip.tool[0]
+        CALL rob.grip_0(TRUE)
+
+        RETURN
+.END
+

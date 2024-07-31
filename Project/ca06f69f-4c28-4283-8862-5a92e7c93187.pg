@@ -1,0 +1,75 @@
+﻿.PROGRAM rob.init_0()
+;
+; ABSTRACT:     Initialize variables and robot control
+;
+; INPUTS:       None
+;
+; INPUTS:       None
+;
+	
+        GLOBAL REAL rob.number[], rob.run[]
+        AUTO REAL code, cal.state, bit
+	
+; Indicate the application sample is running
+
+        rob.run[0] = TRUE
+
+; Change the default vision timeout
+
+        PARAMETER VTIMEOUT = 10
+
+; Ensure emergency stop circuits are clear
+
+        WHILE (STATE(4) BAND ^B100 == 4) DO
+            WAIT.EVENT , 1
+            TYPE "Please release all EMERGENCY STOP circuits"
+        END
+
+; Ensure power is enabled before attaching
+
+        WHILE NOT SWITCH(POWER) DO
+            ENABLE POWER
+            WAIT.EVENT , 1
+            IF (NOT rob.run[0]) THEN
+                HALT
+            END     
+        END
+
+; Check for calibration
+
+        cal.state = PARAMETER(NOT.CALIBRATED)
+        bit = BMASK(rob.number[0])
+
+        IF (cal.state BAND bit) == bit THEN
+            TYPE "Robot is not calibrated"
+            rob.run[0] = FALSE
+            HALT
+            ; Alternatively, perform runtime calibration, small motion on scara joint 4 possible
+            ; CALIBRATE
+            ; rob.run[0] = TRUE
+        END
+
+; Attach the robot so it can be moved
+
+        DETACH ()
+        SELECT ROBOT = rob.number[0]
+        ATTACH (0, 1)
+        code = IOSTAT(0)
+        IF (code == -515) THEN
+            code = 0
+        END
+        IF (code < 0) THEN
+            TYPE "Unable to attach the robot: ", code
+            rob.run[0] = FALSE
+            HALT
+        END
+
+
+
+; Initialize the speed for all moves
+
+        SPEED 100 ALWAYS 
+
+        RETURN
+.END
+

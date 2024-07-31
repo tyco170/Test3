@@ -1,0 +1,62 @@
+﻿.PROGRAM err.details_0(code, $text)
+;
+; ABSTRACT:     Extract error details associated with the current error from the following
+;       global variables:
+;
+;               err.code[0] = ERROR(-1,0)              ; Error number of last error
+;               err.variable[0] = ERROR(-1,1)          ; Variable part of the error message
+;               err.robot[0] = ERROR(-1,3)             ; Robot Number
+;
+; INPUTS:       None
+;
+; OUTPUTS:      code = The error code;                       
+;               $text = text associated with the error code
+;
+
+        GLOBAL REAL err.code[], err.variable[], err.robot[]
+        AUTO REAL i, counter, mask, bit.number
+        AUTO REAL code2, robot
+
+        code = err.code[0]
+        code2 = err.variable[0]
+        robot = err.robot[0]
+        $text = $TIME(0)+"  "+$ERROR(code)
+
+; Append variable part of the error message
+; (eg. The motor number "n" in *Soft envelope error* Mtr n)
+; There are two areas:
+; Error number range: -1000 to -1099 -> Interpret number of bitmask
+; Error number range: -1100 to -1199 -> Read number directly
+
+; Error numbers from -1000 to -1099
+
+        IF (code < -1000) AND (code >= -1099) THEN
+            mask = 1
+            FOR bit.number = 1 TO 7
+                IF code2 BAND mask THEN
+                    $text = $text+$ENCODE(bit.number)
+                    EXIT
+                END
+                mask = mask*2
+            END
+        END
+
+; Error numbers from -1100 to -1199
+
+        IF (code <= -1100) AND (code > -1199) THEN
+            $text = $text+$ENCODE(code2)
+        END
+
+; Extend error message to the variable part
+
+        $text = $text+" error#: "+$ENCODE(code)
+
+; Add If the error is bound to a robot, robot number "n"
+
+        IF robot > 0 THEN
+            $text = $text+" Robot: "+$ENCODE(robot)
+        END
+
+        RETURN
+.END
+

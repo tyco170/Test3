@@ -1,0 +1,125 @@
+﻿.PROGRAM err.reacti_0()
+;
+; ABSTRACT:     Handles system level errors. This program should be customized
+;       for the handling of application specific conditions.
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+
+        GLOBAL REAL err.ss.reacti[], err.priority[]
+        GLOBAL LOC safe.loc[]
+        AUTO REAL speed.robot, move.to.dest
+        AUTO REAL straight, code
+        AUTO LOC #error.loc, #error.dest
+        AUTO $text
+
+; Wait until the robot stopped and record the details of the motion 
+
+        CALL err.break_0()
+
+        HERE #error.loc
+        SET #error.dest = #PDEST
+
+        IF (CONFIG(13) BAND ^B1 == ^B1) THEN
+            straight = FALSE
+        ELSE
+            straight = TRUE
+        END
+
+        speed.robot = SPEED(4)
+
+        CALL err.details_0(code, $text)
+
+; Turn off the error signal to indicate the motion parameters have been recorded
+
+        SIGNAL -err.ss.reacti[0]
+        WAIT
+
+; Process error information to file and type to the monitor window
+        
+        CALL err.log_0("**********************", FALSE)
+        CALL err.log_0($text, TRUE)
+
+        err.priority[0] = err.priority[0]+1
+        REACTI err.ss.reacti[0], err.reacti_0, err.priority[0]
+
+        WAIT.EVENT , 0.5                            ; Delay so hardware status can refresh/update
+
+; Handle the specific error code
+
+        move.to.dest = TRUE
+        CASE code OF
+
+          VALUE -604, -643, -906, -908, -909, -910, -912, -921, -929:     ; E-STOP from various sources
+
+            CALL err.report_0(code, $text)
+              WHILE (STATE(4) BAND ^B100 == 4) DO
+                WAIT.EVENT , 1
+                TYPE "Please release all EMERGENCY STOP circuits"
+            END
+            WAIT.EVENT , 0.25
+
+          VALUE -616:                               ; Belt Window Violation
+            
+            move.to.dest = FALSE
+
+          ANY
+            
+            TYPE "... this error we have not yet treated"
+            CALL err.log_0("*General failure*", FALSE)
+            CALL err.log_0("(so far there is no individual programmed response)", FALSE)
+            HALT
+
+        END 
+
+; Wait until power is enabled
+
+        WHILE SWITCH(POWER) == FALSE DO
+            ENABLE POWER
+            WAIT.EVENT , 1
+        END
+
+; Attach the robot so we can control/move the robot. 
+
+        DO
+            WAIT.EVENT , 1
+            ATTACH (0, 1)
+            IF IOSTAT(0,0) < 0 THEN
+                TYPE "Could not attach robot. Error: ", $ERROR(IOSTAT(0,0)), " occured!"
+            END
+        UNTIL IOSTAT(0,0) == 1
+
+; Move the robot z to a safe height
+
+        SPEED 20
+        DEPART DZ(safe.loc[0])-DZ(HERE)
+        BREAK
+
+; If we need to move to the location
+
+        IF move.to.dest THEN
+
+            SPEED 20
+            MOVES #error.loc
+            BREAK           
+            
+            SPEED speed.robot
+
+            IF straight THEN
+                MOVES #error.dest
+            ELSE
+                MOVE #error.dest
+            END
+
+        END
+
+; Reset the REACTI and indicate that this priority level is done
+
+        err.priority[0] = err.priority[0]-1
+        REACTI err.ss.reacti[0], err.reacti_0, err.priority[0]
+
+        RETURN
+.END
+

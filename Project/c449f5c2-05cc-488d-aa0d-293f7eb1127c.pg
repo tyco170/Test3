@@ -1,0 +1,55 @@
+﻿.PROGRAM err.log_0($text, show.stack)
+;
+; ABSTRACT:     Logs a message to the error log
+;
+; INPUTS:       $text = The message to log
+;               show.stack = The stack trace should be written to the log
+;
+; OUTPUTS:      None
+;
+
+        AUTO REAL disk.lun, i, counter, mask, bit.number
+        LOCAL $prog[]
+
+; Attach and open the disk logical unit
+
+        DO
+            ATTACH (disk.lun, 5) "DISK"
+            WAIT
+        UNTIL IOSTAT(disk.lun,0) == 1
+
+        FOPENA (disk.lun, , 8) "d:\errorlog.dat"
+
+; Write the message to the file and the monitor window
+
+        WRITE (disk.lun) $text
+        TYPE $text
+
+; If we are to include the stack trace
+
+        IF show.stack THEN
+
+            PRG.INFO 6                      ; Start reading Access
+            counter = 0
+            DO
+                counter = counter+1
+                $prog[counter] = $PRG.INFO(counter)
+            UNTIL $prog[counter] == ""
+            counter = counter-1
+            PRG.INFO -1                     ;  end the reading access
+
+            WRITE (disk.lun) "Stack Trace: "
+            FOR i = 1 TO counter
+                WRITE (disk.lun) " "+$prog[i]
+            END
+
+        END
+
+; Close the logical unit
+
+        FCLOSE (disk.lun)
+        DETACH (disk.lun)
+
+        RETURN
+.END
+

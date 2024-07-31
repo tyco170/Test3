@@ -1,0 +1,32 @@
+﻿.PROGRAM rob.place_0(index)
+;
+; ABSTRACT:     Perform a place operation at a static location
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+
+        GLOBAL LOC place.loc[]
+	
+; Approach and move to the location
+
+        APPROS place.loc[0], 25
+        MOVES place.loc[0]
+        BREAK
+
+; Actuate the gripper and depart
+
+        CALL rob.grip_0(TRUE)
+
+        APPROS place.loc[0], 25
+                 
+; Clear any tool applied for the placement operation
+
+        IF (NOT IDENTICAL(TOOL,grip.tool[0])) THEN
+            TOOL grip.tool[0]
+        END
+
+        RETURN
+.END
+

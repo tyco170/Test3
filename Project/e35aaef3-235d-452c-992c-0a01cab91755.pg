@@ -1,0 +1,38 @@
+﻿.PROGRAM err.init_0()
+;
+; ABSTRACT:     Initializes the variables of the error handling, enables the interrupt
+;       routine "err.reacti()" and the error-handling routine "err.reacte".
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+; SIDE EFFECTS:
+;               Creates or intializes the following global variables:
+;                       err.ss.reacti                               => Soft signal triggering REACTI
+;                       err.priority                                => Error priority number/sequence
+;
+
+        GLOBAL REAL err.priority[], err.ss.reacti[]
+
+; Enable handler for fatal robot error condititions
+
+        REACTE err.reacte_0             
+
+; Initialize REACTI variables
+
+        err.ss.reacti[0] = 2002         
+        SIGNAL -err.ss.reacti[0]
+        WAIT
+
+        err.priority[0] = 2             ; The priority must be higher than that of all other programs
+                                        ; Standard V+ program priority = 0
+                                        ; Standard interrupt program prioritaet = 1
+
+; Enable REACTI handling
+                                        
+        REACTI err.ss.reacti[0], err.reacti_0, err.priority[0]
+
+        RETURN
+.END
+

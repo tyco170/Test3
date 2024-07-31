@@ -1,0 +1,10 @@
+﻿.PROGRAM a.error_0()
+;
+; ABSTRACT:     Module program for error related programs
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+.END
+

@@ -1,0 +1,39 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:VPlusModule id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers.Memory/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>1785713759</_a>
+<_b>-29366</_b>
+<_c>18031</_c>
+<_d>138</_d>
+<_e>55</_e>
+<_f>76</_f>
+<_g>215</_g>
+<_h>197</_h>
+<_i>216</_i>
+<_j>157</_j>
+<_k>128</_k>
+</Identifier>
+<ControllerLink href="#ref-3"/>
+<ModuleName id="ref-4">a.error_0</ModuleName>
+<Version>3</Version>
+<CustomSaveLocation id="ref-5"></CustomSaveLocation>
+</a1:VPlusModule>
+<a3:LinkedReference id="ref-3" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Core.References/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>1113024913</_a>
+<_b>15651</_b>
+<_c>16928</_c>
+<_d>130</_d>
+<_e>245</_e>
+<_f>185</_f>
+<_g>50</_g>
+<_h>84</_h>
+<_i>148</_i>
+<_j>65</_j>
+<_k>66</_k>
+</Identifier>
+<CachedName id="ref-6">/SmartController0/Controller Settings</CachedName>
+</a3:LinkedReference>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,34 @@
+﻿.PROGRAM err.reacte_0()
+;
+; ABSTRACT:     Program that reacts to the system level errors and triggers the
+;       REACTI interrupt routine "err.reacti()".
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+; SIDE EFFECTS:
+;               Writes the value of the global variable:
+;                       err.code, err,variable, err.robot    => Information on the error
+;
+
+        GLOBAL REAL err.code[], err.variable[], err.robot[]
+        GLOBAL REAL err.ss.reacti[]
+
+; Record the details of the error
+
+        err.code[0] = ERROR(-1,0)                ; Error number of last error
+        err.variable[0] = ERROR(-1,1)            ; Variable part of the error message
+        err.robot[0] = ERROR(-1,3)               ; Robot number
+
+        SIGNAL err.ss.reacti[0]
+        WAIT.EVENT , 0.016
+
+; An error in the error handler is found best by commenting out 
+; the following "REACTE err.reacte" line
+
+        REACTE err.reacte_0
+
+        RETURN
+.END
+

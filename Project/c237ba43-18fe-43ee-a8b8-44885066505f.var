@@ -1,0 +1,21 @@
+[SLWD version=1.0]
+FV=1	F=
+_EN=V
++N=err.code[0]	T=0	IV=0	DC=Error code of the last detected REACTE error	R=0	DM=0	C=Error Tracking
++N=err.priority[0]	T=0	IV=2	DC=Priority level of the last detected REACTE error	R=0	DM=0	C=Error Tracking
++N=err.robot[0]	T=0	IV=0	DC=Number of the robot associated with the last detected REACTE error	R=0	DM=0	C=Error Tracking
++N=err.variable[0]	T=0	IV=0	DC=Variable position of the error code of the last detected REACTE error	R=0	DM=0	C=Error Tracking
++N=err.ss.reacti[0]	T=0	IV=2002	DC=Soft signal used to trigger the REACTI when a REACTE error is detected	R=0	DM=0	C=Error Tracking
++N=safe.loc[0]	T=2	IV= 550.001/@/   0.003/@/ 384.000/@/   0.000/@/ 180.000/@/ 180.000	DC=The safe location for the robot.	R=1	DM=2	C=General
++N=rob.number[0]	T=0	IV=1	DC=The number of the robot being controlled	R=0	DM=0	C=General
++N=grip.tool[0]	T=2	IV=   0.000/@/   0.000/@/   0.000/@/   0.000/@/   0.000/@/   0.000	DC=The offset for the first end-effector tip.	R=0	DM=0	C=General
++N=rob.run[0]	T=0	IV=0	DC=Flag indicating if the application should be running	R=0	DM=0	C=General
++N=o.open[0]	T=0	IV=3001	DC=Output signal number to open the gripper.	R=0	DM=0	C=I/O Signals
++N=o.close[0]	T=0	IV=3002	DC=Output signal number to close the gripper.	R=0	DM=0	C=I/O Signals
++N=i.open[0]	T=0	IV=0	DC=Input signal number to detect if the gripper is opened. 	R=0	DM=0	C=I/O Signals
++N=i.close[0]	T=0	IV=0	DC=Input signal number to detect if the gripper is closed.	R=0	DM=0	C=I/O Signals
++N=pick.loc[0]	T=2	IV= 550.001/@/   0.003/@/ 384.000/@/   0.000/@/ 180.000/@/ 180.000	DC=The robot pick position	R=1	DM=2	C=Pick
++N=place.loc[0]	T=2	IV= 550.001/@/   0.003/@/ 384.000/@/   0.000/@/ 180.000/@/ 180.000	DC=The robot place position	R=1	DM=2	C=Place
++N=$$ip.address[0]	T=1	IV=127.0.0.1	DC=The IP address of the application manager IPC for vision operations	R=0	DM=0	C=General
++N=test	T=0	IV=0	R=0	DM=0
+_EN=C

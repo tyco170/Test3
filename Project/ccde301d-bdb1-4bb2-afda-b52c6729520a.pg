@@ -1,0 +1,26 @@
+﻿.PROGRAM rob.pick_0()
+;
+; ABSTRACT:     Perform a pick operation at a static location
+;
+; INPUTS:       None
+;
+; OUTPUTS:      None
+;
+
+        GLOBAL LOC pick.loc[]
+
+; Approach and move to the location
+        
+        APPROS pick.loc[0], 25
+        MOVES pick.loc[0]
+        BREAK
+
+; Actuate the gripper and depart
+
+        CALL rob.grip_0(FALSE)
+
+        APPROS pick.loc[0], 25
+                 
+        RETURN
+.END
+
